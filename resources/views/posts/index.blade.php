@@ -16,6 +16,11 @@
                 class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
                     Edit
                 </Link>
+                <Link class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2"
+                      confirm="Delete Post..." confirm-text="Are you sure?" confirm-button="Yes"
+                      cancel-button="Cancel" href="{{route('posts.destroy', $post->id)}}" method="DELETE" preserve-scroll>
+                    Delete
+                </Link>
                     @endcell
             </x-splade-table>
         </div>

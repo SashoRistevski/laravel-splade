@@ -53,8 +53,14 @@ class CategoriesController extends Controller
             ->autoDismiss(3);
         return redirect()->route('categories.index');
     }
-
-
+    public function destroy(Category $category)
+    {
+        $category->delete();
+        Toast::title('Category Deleted!')
+            ->centerTop()
+            ->autoDismiss(3);
+        return redirect()->back();
+    }
 
 
 }

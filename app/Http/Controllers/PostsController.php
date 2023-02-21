@@ -75,4 +75,12 @@ class PostsController extends Controller
         return to_route('posts.index');
     }
 
+    public function destroy(Post $post)
+    {
+        $post->delete();
+        Toast::title('Post Deleted!')
+            ->centerTop()
+            ->autoDismiss(3);
+        return redirect()->back();
+    }
 }
