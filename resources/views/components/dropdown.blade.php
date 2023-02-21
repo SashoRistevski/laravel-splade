@@ -1,11 +1,11 @@
 @props(['width' => '48'])
 
 @php
-switch ($width) {
-    case '48':
-        $width = 'w-48';
-        break;
-}
+    switch ($width) {
+        case '48':
+            $width = 'w-48';
+            break;
+    }
 @endphp
 
 <x-splade-dropdown {{ $attributes->except('width') }}>

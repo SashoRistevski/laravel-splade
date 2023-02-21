@@ -20,6 +20,6 @@
 
     @includeWhen($help, 'splade::form.help', ['help' => $help])
     @includeWhen($showErrors, 'splade::form.error', ['name' => $validationKey()])
-  </div>
+</div>
 
 

@@ -8,7 +8,7 @@
             'type' => 'checkbox',
             'v-model' => $vueModel(),
             'data-validation-key' => $validationKey(),
-        ]) }} :true-value="@js($value)" :false-value="@js($falseValue)" />
+        ]) }} :true-value="@js($value)" :false-value="@js($falseValue)"/>
 
         @if(trim($slot))
             <span class="ml-2">{{ $slot }}</span>

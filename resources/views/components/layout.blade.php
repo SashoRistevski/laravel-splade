@@ -1,5 +1,5 @@
 <div class="min-h-screen bg-gray-100">
-    <x-navigation />
+    <x-navigation/>
 
     <!-- Page Heading -->
     @if(isset($header))

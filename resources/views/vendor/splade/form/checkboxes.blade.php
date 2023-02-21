@@ -7,6 +7,6 @@
             :name="$name . '[]'"
             :validation-key="$name . '.' . $loop->index"
             :label="$label"
-            :value="$value" />
+            :value="$value"/>
     @endforeach
 </x-splade-component>

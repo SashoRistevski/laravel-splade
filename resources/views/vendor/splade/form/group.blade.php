@@ -13,7 +13,7 @@
         'space-y-1' => !$inline && $gridClasses->isEmpty(),
     ])->class($gridClasses->all()) }}
     >
-      {{ $slot }}
+        {{ $slot }}
     </div>
 
     @includeWhen($help, 'splade::form.help', ['help' => $help])

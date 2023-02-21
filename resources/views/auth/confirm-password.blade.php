@@ -5,10 +5,11 @@
         </div>
 
         <x-splade-form action="{{ route('password.confirm') }}" class="space-y-4">
-            <x-splade-input id="password" type="password" name="password" required autocomplete="current-password" :label="__('Password')" />
+            <x-splade-input id="password" type="password" name="password" required autocomplete="current-password"
+                            :label="__('Password')"/>
 
             <div class="flex justify-end">
-                <x-splade-submit :label="__('Confirm')" />
+                <x-splade-submit :label="__('Confirm')"/>
             </div>
         </x-splade-form>
     </x-auth-card>

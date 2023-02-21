@@ -29,8 +29,8 @@ Route::middleware('splade')->group(function () {
         Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
 
-    Route::resource('categories',CategoriesController::class);
-    Route::resource('posts',PostsController::class);
+    Route::resource('categories', CategoriesController::class);
+    Route::resource('posts', PostsController::class);
 
-    require __DIR__.'/auth.php';
+    require __DIR__ . '/auth.php';
 });

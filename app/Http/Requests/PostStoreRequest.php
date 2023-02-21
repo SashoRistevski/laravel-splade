@@ -24,7 +24,7 @@ class PostStoreRequest extends FormRequest
     {
         return [
             'title' => 'required|max:50',
-            'slug'=> ['required','max:70', Rule::unique('posts', 'slug')->ignore($this->route('post'))],
+            'slug' => ['required', 'max:70', Rule::unique('posts', 'slug')->ignore($this->route('post'))],
             'description' => 'required|min:5|max:1000',
             'category_id' => 'required|exists:categories,id'
         ];

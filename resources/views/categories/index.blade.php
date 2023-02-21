@@ -1,10 +1,11 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex justify-between">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Categories') }}
-        </h2>
-            <Link href="{{ route('categories.create') }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"> Create Category
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('Categories') }}
+            </h2>
+            <Link href="{{ route('categories.create') }}"
+                  class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"> Create Category
             </Link>
         </div>
 
@@ -19,7 +20,8 @@
                 </Link>
                 <Link class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2"
                       confirm="Delete Category..." confirm-text="Are you sure?" confirm-button="Yes"
-                    cancel-button="Cancel" href="{{route('categories.destroy', $category->id)}}" method="DELETE" preserve-scroll>
+                      cancel-button="Cancel" href="{{route('categories.destroy', $category->id)}}" method="DELETE"
+                      preserve-scroll>
                     Delete
                 </Link>
                 @endcell

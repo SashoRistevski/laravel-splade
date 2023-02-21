@@ -23,8 +23,8 @@ class CategoryStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=> ['required','max:50', Rule::unique('categories', 'name')->ignore($this->route('category'))],
-            'slug'=> ['required','max:70', Rule::unique('categories', 'slug')->ignore($this->route('category'))]
+            'name' => ['required', 'max:50', Rule::unique('categories', 'name')->ignore($this->route('category'))],
+            'slug' => ['required', 'max:70', Rule::unique('categories', 'slug')->ignore($this->route('category'))]
         ];
     }
 }

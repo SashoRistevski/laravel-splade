@@ -37,7 +37,7 @@
                 />
             @else
                 <a @submit.prevent
-                    class="inline-block py-2 px-3 rounded-md border border-gray-300 shadow-sm bg-white hover:bg-gray-100 relative cursor-pointer font-medium text-gray-700 text-sm focus:outline-none focus:ring focus:ring-opacity-50 focus:border-indigo-300 focus:ring-indigo-200 text-center">
+                   class="inline-block py-2 px-3 rounded-md border border-gray-300 shadow-sm bg-white hover:bg-gray-100 relative cursor-pointer font-medium text-gray-700 text-sm focus:outline-none focus:ring focus:ring-opacity-50 focus:border-indigo-300 focus:ring-indigo-200 text-center">
 
                     @if(trim($slot))
                         {{ $slot }}
@@ -53,8 +53,8 @@
                         'type' => 'file',
                         'data-validation-key' => $validationKey(),
                     ]) }}
-                        @if(count($accept) > 0)
-                            accept="{{ implode(',', $accept) }}"
+                    @if(count($accept) > 0)
+                        accept="{{ implode(',', $accept) }}"
                         @endif
                     />
                 </a>
@@ -65,7 +65,7 @@
 
         @if(!$filepond && $showFilename)
             <div class="mt-2 text-sm italic" v-if="file.filenames.length > 0">
-                <p v-for="(filename, key) in file.filenames" v-bind:key="key" v-text="filename" />
+                <p v-for="(filename, key) in file.filenames" v-bind:key="key" v-text="filename"/>
             </div>
         @endif
 
